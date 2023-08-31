@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Libre+Franklin&display=swap');
+
+body{
+    font-family: 'EB Garamond', serif;
+    margin: 0;
+    position: relative;
+    min-height: 120%;
+}
+
+div.navBar{
+    display: flex;
+    height: 77px;
+    background-color: rgba(1, 36, 4, 0.909);
+    color: antiquewhite;
+    font-size: 1.1rem;
+   
+    top: 0;
+    z-index: 1;
+}
+
+div.navBar div.navLinks div.hyperlink1 a,
+div.navBar div.navLinks div.hyperlink2 a,
+div.navBar div.navLinks div.hyperlink4 a{
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+div.navLinks div a{
+    padding: 1vh 0.5vw;
+}
+    
+
+/* company logo */
+div.logo{
+    flex-grow: 1; /*specifies how much a flex item will grow relative to the rest of the flex items*/
+    margin-left: 6%;
+    
+}
+
+div.navBar div.logo a img{
+    height: 100%;
+    width: 100px;
+}
+
+div.navLinks{
+    flex-grow: 5;
+    display: flex;
+    justify-content: right;
+}
+
+div.navLinks div{
+    padding: 0px 2.2%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+div.logInOut a.logOutHyper, 
+div.logInOut a.logInHyper{
+    color: rgb(7, 71, 7);
+    background-color: rgb(247, 241, 233);
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color ease 0.4s, padding ease 0.4s;
+}
+
+div.logInOut a.logOutHyper:hover, 
+div.logInOut a.logInHyper:hover{
+    background-color: rgb(245, 242, 242);
+    padding: 1.2vh 1.0vw;
+}
+
+a.hyperlink1,
+a.hyperlink2,
+a.hyperlink4{
+    background-image: linear-gradient(
+      to right,
+      #effae8,
+      #f0faf2 50%,
+      rgb(252, 231, 205) 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+a.hyperlink1:before,
+a.hyperlink2:before,
+a.hyperlink4:before{
+    content: '';
+    background: #ffffff;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+  
+a.hyperlink1:hover,
+a.hyperlink2:hover,
+a.hyperlink4:hover{
+   background-position: 0;
+}
+  
+a.hyperlink1:hover::before,
+a.hyperlink2:hover::before,
+a.hyperlink4:hover::before{
+    width: 100%;
+}
+
+a.hyperlink3{
+    text-decoration: none;
+    color: rgb(238, 202, 156);
+    font-size: 18px;
+  }
+
+/* records.php css */
+/* table menu css */
+div.dbMenu{
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+div.dbMenu button.viewReservationBtn{
+    box-shadow: -0.3rem 0 1rem rgb(175, 162, 144);
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    transition: all 0.2s ease-in-out;
+}
+
+div.dbMenu button.viewCustomerBtn{
+    box-shadow: 0.3rem 0 1rem rgb(175, 162, 144);
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    transition: all 0.2s ease-in-out;
+}
+
+div.dbMenu button.viewReservationBtn:hover,
+div.dbMenu button.viewCustomerBtn:hover{
+    transform: scale(1.1);
+}
+
+div.dbMenu button{
+    font-family: 'EB Garamond', serif;
+    font-size: 18px;
+    padding: 0px 16px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    height: 40px;
+    background-color: antiquewhite;
+    border: none;
+    cursor: pointer;
+}
+
+/* table css */
+table.records{
+    width: 95%;
+}
+
+table tr th{
+    width: 170px;
+    height: 40px;
+    padding: 5px 12px;
+}
+
+table tr{
+    height: 45px;
+}
+
+table tr td{
+    padding: 0px 10px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 30px auto;
+}
+
+th, td {
+    text-align: left;
+}
+
+th {
+    background-color: #4e342eef;
+    color: #FFF;
+}
+
+table.reservationRecords tr:nth-child(even) {
+    background-color: #E8F5E9;
+}
+
+table.customerRecords tr:nth-of-type(even){
+    background-color: #E8F5E9;
+}
+
+table.customerRecords tr:hover,
+table.reservationRecords tr:hover{
+    background-color: #C8E6C9;
+}
+td.no-records{
+    text-align: center;
+    height: 70px;
+}
+
+table.customerRecords td.lastCol{
+    width: 60px;
+}
+
+table.customerRecords td.lastCol div.buttons button.csEditButton{
+    width: 60px;
+}
+
+/* buttons and search bar */
+div.buttons{
+    display: flex;
+}
+
+button.editButton {
+    background-color: #257428;
+    width: 100%;
+    color: #FFF;
+    padding: 7px 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none; 
+    transition: all 0.3s ease;
+}
+
+button.editButton:hover{
+    color: black;
+    background-color: #b9e9ba;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.893);
+}
+
+button.deleteButton {
+    width: 100%;
+    background-color: #e03c30;
+    color: #FFF;
+    padding: 7px 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+button.deleteButton:hover{
+    color: black;
+    background-color: #fecdcd;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.893);
+}
+
+div.searchBar{
+    display: flex;
+    justify-content: center;
+}
+
+div.searchBar input.searchValue{
+    font-family: 'EB Garamond', serif;
+    font-size: 18px;
+    padding: 11px 0;
+    padding-left: 37px;
+    padding-right: 25px;
+    border-radius: 25px;
+    border: 1px black solid;
+    background-color: whitesmoke;
+    border: none;
+    outline: none;
+}
+
+div.searchBar input.searchValue:focus{
+    border: none;
+    outline: none;
+    box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.799);
+}
+
+div.searchBar div.searchBarPosition{
+    position: relative;
+}
+
+div.searchBar img{
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 13px;
+    left: 11.5px;
+}
+
+
+/* pop up container */
+div.popUpContainer{
+    display: block;
+    z-index: 9;
+    position: absolute;
+    top: 120px;
+    left: 40%;
+    margin: -3vh 0 0 -6vw;
+    background-color: rgb(242, 253, 235);
+    height: 440px;
+    width: 30%;
+    text-align: center;
+    border-radius: 30px;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.874), 0 0 2rem rgba(0, 0, 0, 0.573);
+}
+
+div.popUpContainer h2{
+    position: relative;
+}
+
+div.popUpContainer h2,
+div.popUpContainer form{
+    margin: 4vh 4vw;
+}
+
+div.popUpContainer form input[type=text],
+div.popUpContainer form input[type=password]{
+    width: 70%;
+    margin: 8px 0;
+    padding: 5px 6px;
+    border-radius: 15px;
+    border: none;
+    transition: transform 0.3s ease-in-out;
+    font-family: 'EB Garamond', serif;
+    font-size: 15px;
+    box-shadow: 0 0 0.8rem rgb(0, 56, 0);
+    transition: all 0.3s ease;
+}
+
+div.popUpContainer form input[type=text]:focus,
+div.popUpContainer form input[type=password]:focus{
+    transform: scale(1.1);
+    box-shadow: 0 0 0.8rem rgb(0, 56, 0), 0 0 1.3rem rgb(0, 36, 0);
+    outline: none;
+}
+
+button.delete{
+    background-color: transparent;
+    border: none;
+    margin-left: 5px;
+    margin-top: 20px;
+}
+
+button.delete img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    
+    transition: all 0.3s ease-in-out;
+    
+}
+
+button.delete img:hover{
+    transform: scale(1.2);
+}
+
+button.delete img:active{
+    border: none;
+    outline: none;
+}
+
+a.closeHyperlink img{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 90%;
+    top: 5%;
+    transition: all 0.25s ease;
+}
+
+a.closeHyperlink img:hover{
+    transform: scale(1.25);
+}

@@ -1,0 +1,364 @@
+/* navBar */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Libre+Franklin&display=swap');
+
+body{
+    font-family: 'EB Garamond', serif;
+    margin: 0;
+}
+
+div.navBar{
+    display: flex;
+    height: 77px;
+    background-color: rgba(1, 36, 4, 0.909);
+    color: antiquewhite;
+    font-size: 1.1rem;
+    /* position: sticky; */
+    z-index: 1;
+    top: 0;
+}
+
+div.navBar div.navLinks div.hyperlink1 a,
+div.navBar div.navLinks div.hyperlink3 a,
+div.navBar div.navLinks div.hyperlink4 a{
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+div.navLinks div a{
+    padding: 1vh 0.5vw;
+}
+    
+/* company logo */
+div.logo{
+    flex-grow: 1; /*specifies how much a flex item will grow relative to the rest of the flex items*/
+    margin-left: 6%;
+}
+
+div.navBar div.logo a img{
+    height: 100%;
+    width: 100px;
+}
+
+div.navLinks{
+    flex-grow: 5;
+    display: flex;
+    justify-content: right;
+}
+
+div.navLinks div{
+    padding: 0px 2.2%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+div.logInOut a.logOutHyper, 
+div.logInOut a.logInHyper{
+    color: rgb(7, 71, 7);
+    background-color: rgb(247, 241, 233);
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color ease 0.4s, padding ease 0.4s;
+}
+
+div.logInOut a.logOutHyper:hover, 
+div.logInOut a.logInHyper:hover{
+    background-color: rgb(245, 242, 242);
+    padding: 1.2vh 1.0vw;
+}
+
+a.hyperlink1,
+a.hyperlink3,
+a.hyperlink4{
+    background-image: linear-gradient(
+      to right,
+      #effae8,
+      #f0faf2 50%,
+      rgb(252, 231, 205) 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+a.hyperlink1:before,
+a.hyperlink3:before,
+a.hyperlink4:before{
+    content: '';
+    background: #ffffff;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+  
+a.hyperlink1:hover,
+a.hyperlink3:hover,
+a.hyperlink4:hover{
+   background-position: 0;
+}
+  
+a.hyperlink1:hover::before,
+a.hyperlink3:hover::before,
+a.hyperlink4:hover::before{
+    width: 100%;
+}
+
+a.hyperlink2{
+    text-decoration: none;
+    color: rgb(238, 202, 156);
+    font-size: 18px;
+  }
+
+/* check Availability form */
+div.checkAvailability{
+    height: 200px;
+    position: relative;
+}
+
+div.checkAvailability img{
+    width: 100%;
+    height: 200px;
+    z-index: -1;
+    opacity: 0.55;
+}
+
+div.checkAvailability div.form{
+    display: flex;
+    justify-content: space-around;
+    width: 80vw;
+    opacity: 0.8;
+    border-radius: 20px;
+    padding: 17px 10px;
+    background-color: white;
+    position: absolute;
+    top: 20px;
+    left: 8vw;
+    font-size: 17px;
+}
+
+/* container 1 */
+div.checkAvailability div.container1 input,
+div.checkAvailability div.container1 select{
+    padding: 4px;
+    border: none;
+    border-bottom: 1px solid black;
+    transition: all ease 0.3s;
+}
+
+div.checkAvailability div.container1 input:focus,
+div.checkAvailability div.container1 select:focus{
+    outline: none;
+    background-color: rgb(228, 221, 221);
+}
+
+/* slider container */
+div.form div.sliderContainer{
+    position: relative;
+
+}
+
+div.form div.sliderContainer div.priceContent h4,
+div.form div.sliderContainer div.priceContent label,
+div.form div.sliderContainer div.priceContent p{
+    margin: 0;
+}
+
+div.form div.sliderContainer h4{
+    color: #000;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+div.form div.sliderContainer div.priceContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 30px;
+}
+
+div.form div.sliderContainer div.priceContent label{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+div.form div.sliderContainer div.priceContent p{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+div.slider{
+    width: 300px;
+    position: relative;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent; 
+    position: absolute;
+    left: 0;
+    margin-top: 10px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: #36b37e;
+    cursor: pointer;
+    margin-top: -5px;
+    position: relative;
+    z-index: 1;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    background: #e8e8e8;
+    border-radius: 3px;
+    border: none;
+}
+
+/* check availability button */
+div.checkAvailability div.form div.checkAvailabilityBtn{
+    vertical-align: center;
+}
+
+
+div.checkAvailability div.form div.checkAvailabilityBtn input{
+    height: 40px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    margin-top: 30px;
+    font-family: 'EB Garamond', serif;
+    font-size: 18px;
+    padding: 10px 13px;
+    font-weight: bold;
+    background-color: rgba(194, 243, 194, 0.909);
+    color: rgb(1, 63, 1);
+    transition: box-shadow ease 0.3s, background-color ease 0.3s
+}
+
+div.checkAvailability div.form div.checkAvailabilityBtn input:hover{
+    box-shadow: 0 0 2rem rgb(94, 177, 121), 0 0 2rem rgb(166, 235, 177);
+    background-color: rgba(1, 88, 1, 0.918);
+    color: white;
+}
+
+div.checkAvailability form input,
+div.checkAvailability form select{
+    margin: 5px 0px ;
+}
+
+p.alertCheckAvailability{
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* display cars */
+div.displayCars{
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.displayCars div.imageContainer img{
+    width: 100%;
+    height: auto;
+    z-index: 2;
+}
+
+div.imageContainer{
+    position: relative;
+    width: 40%;
+}
+
+div.displayCars div.imageContainer button{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    color: rgb(24, 24, 24);
+    font-size: 18px;
+    padding: 10px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-family: 'EB Garamond', serif;
+    transition: box-shadow ease 0.3s, background-color ease 0.3s, font-size ease 0.3s;
+}
+
+div.displayCars div.imageContainer button:hover{
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.336), 0 6px 23px rgba(0, 0, 0, 0.342);
+    background-color: rgba(255, 255, 255, 0.945);
+    font-size: 20px;
+}
+
+/* car details container */
+div.mainContainer div.carDetails{
+    position: sticky;
+    top: 0px;
+    left: 0;
+    float: left;
+    width: 300px;
+    height: 100vh;
+    background-color: whitesmoke;
+}
+
+div.mainContainer div.carDetails div.divContainer{
+    visibility: hidden;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: auto;
+    border-radius: 50px;
+}
+
+div.mainContainer div.carDetails div.divContainer h2.carName{
+    font-size: 22px;;
+    padding-top: 15px;
+}
+
+div.mainContainer div.carDetails div.divContainer img.carImg{
+    width: 200px;
+    height: 120px;
+}
+
+div.mainContainer div.carDetails div.divContainer table.carInfo{
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+div.mainContainer div.carDetails div.divContainer table.carInfo tr td.label{
+    width: 35%;
+    text-align: right;
+}
+
+div.mainContainer div.carDetails div.divContainer table.carInfo tr td.details{
+    width: 75%;
+    padding-left: 20px;
+    text-align: left;
+}
+
+/* if not available */
+p.notAvailable{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(65, 6, 6);
+}

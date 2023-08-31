@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Libre+Franklin&display=swap');
+
+body{
+    font-family: 'EB Garamond', serif;
+    margin: 0;
+    background: linear-gradient(0.3turn, rgb(0, 0, 0), rgba(91, 156, 71, 0.776), rgb(0, 0, 0));
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 165vh;
+}
+
+/* navbar */
+div.navBar{
+    display: flex;
+    height: 77px;
+    background-color: rgba(1, 36, 4, 0.909);
+    color: antiquewhite;
+    font-size: 1.1rem;
+    /* position: sticky; */
+    z-index: 1;
+    top: 0;
+}
+
+div.navBar div.navLinks div.hyperlink1 a,
+div.navBar div.navLinks div.hyperlink2 a,
+div.navBar div.navLinks div.hyperlink3 a,
+div.navBar div.navLinks div.hyperlink4 a{
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+div.navLinks div a{
+    padding: 1vh 0.5vw;
+}
+    
+
+/* company logo */
+div.logo{
+    flex-grow: 1; /*specifies how much a flex item will grow relative to the rest of the flex items*/
+    margin-left: 6%;
+}
+
+div.navBar div.logo a img{
+    height: 100%;
+    width: 100px;
+}
+
+div.navLinks{
+    flex-grow: 5;
+    display: flex;
+    justify-content: right;
+}
+
+div.navLinks div{
+    padding: 0px 2.2%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+div.logInOut a.logOutHyper, 
+div.logInOut a.logInHyper{
+    color: rgb(7, 71, 7);
+    background-color: rgb(247, 241, 233);
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color ease 0.4s, padding ease 0.4s;
+}
+
+div.logInOut a.logOutHyper:hover, 
+div.logInOut a.logInHyper:hover{
+    background-color: rgb(245, 242, 242);
+    padding: 1.2vh 1.0vw;
+}
+
+a.hyperlink1,
+a.hyperlink2,
+a.hyperlink3,
+a.hyperlink4{
+    background-image: linear-gradient(
+      to right,
+      #effae8,
+      #f0faf2 50%,
+      rgb(252, 231, 205) 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+a.hyperlink1:before,
+a.hyperlink2:before,
+a.hyperlink3:before,
+a.hyperlink4:before{
+    content: '';
+    background: #ffffff;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+  
+a.hyperlink1:hover,
+a.hyperlink2:hover,
+a.hyperlink3:hover,
+a.hyperlink4:hover{
+   background-position: 0;
+}
+  
+a.hyperlink1:hover::before,
+a.hyperlink2:hover::before,
+a.hyperlink3:hover::before,
+a.hyperlink4:hover::before{
+    width: 100%;
+}
+
+/* main container */
+div.mainContainer{
+    text-align: center;
+    margin-top: 30px;
+}
+
+div.formContainer{
+    display: inline-block;
+    width: 40%;
+    z-index: 0;
+    background: rgb(245, 239, 232);
+    border-radius: 35px;
+    padding: 4px 14px;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.306), 0 6px 23px rgba(0, 0, 0, 0.329);
+    transition: box-shadow 0.4s ease;
+}
+
+div.formContainer:hover{
+    box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.662), 0 12px 27px rgba(0, 0, 0, 0.717);
+}
+
+/* customer form */
+table.customerDetails{
+    width: 100%;
+    margin-left: 25px;
+}
+
+h2.customerHeader{
+    text-align: center;
+    font-style: italic;
+    color: rgb(1, 56, 1);
+    text-shadow: 2px 2px #031a0044;
+}
+
+table.customerDetails tr td{
+    padding: 5px 0px;
+}
+
+table tr th.customerLabel{
+    font-size: 18px;
+}
+
+table tr th.customerLabel,
+table tr th.reservationLabel{
+    text-align: left;
+    width: 50%;
+}
+
+table tr td.customerDetail,
+table tr td.reservationDetail{
+    text-align: left;
+}
+
+table tr td.customerDetail input{
+    width: 80%;
+    padding: 6px 8px;
+    border-radius: 15px;
+    border: none;
+    transition: transform 0.3s ease-in-out;
+    font-family: 'EB Garamond', serif;
+    font-size: 15px;
+}
+
+table tr td.customerDetail input:focus{
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.306), 0 6px 23px rgba(0, 0, 0, 0.329);
+    outline: none;
+}
+
+/* reservation form */
+h2.reservationHeader{
+    font-style: italic;
+    color: rgb(1, 52, 1);
+    text-shadow: 2px 2px #031a0044;
+}
+
+table tr th.customerLabel{
+    font-size: 18px;
+}
+
+table.reservationDetails tr td{
+    padding: 5px 0px;
+}
+
+
+table.reservationDetails{
+    width: 100%;
+    margin-left: 25px;
+}
+
+table.reservationDetails tr td p{
+    margin: 0;
+    color: rgb(87, 86, 86);
+}
+
+table tr td.reservationDetail input{
+    transition: transform 0.3s ease-in-out;
+    width: 80%;
+    padding: 6px 8px;
+    border-radius: 15px;
+    border: none;
+    font-family: 'EB Garamond', serif;
+    font-size: 15px;
+}
+
+table tr td.reservationDetail input:focus{
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.306), 0 6px 23px rgba(0, 0, 0, 0.329);
+    outline: none;
+}
+
+table.reservationDetails tr td img.updateIcon{
+    position: absolute;
+    height: 24px;
+    width: 26px;
+    left: 98px;
+    top: 4px;
+}
+
+table.reservationDetails tr td.modifyRow{
+    position: relative;
+}
+
+table.reservationDetails tr td a.change{
+    position: absolute;
+    color: rgba(2, 64, 80, 0.712);
+    font-size: 15px;
+    left: 130px;
+    top: 7px;
+}
+
+button.submitReservation{
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+button.submitReservation img{
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    margin: 15px 0px;
+    transition: transform 0.2s ease-in-out;
+}
+
+button.submitReservation img:hover{
+    transform: scale(1.20);
+}
+
+/* summary container */
+div.summaryContainer{
+    display: inline-block;
+    width: 60%;
+    background: rgb(245, 239, 232);
+    border-radius: 35px;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.306), 0 6px 23px rgba(0, 0, 0, 0.329);
+    transition: box-shadow 0.4s ease;
+}
+
+div.summaryContainer:hover{
+    box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.662), 0 12px 27px rgba(0, 0, 0, 0.717);
+}
+
+div.summaryContainer h2.summaryHeader{
+    color: rgb(1, 52, 1);
+    text-shadow: 2px 2px #031a0044;
+}
+
+div.summaryContainer h2.summaryHeader span{
+    font-size: 32px;
+    color: rgb(0, 14, 0);
+    font-style: italic;
+}
+
+div.summaryContainer h3{
+    font-size: 22px;
+    margin: 8px 0;
+}
+
+div.detailsContainer{
+    display: flex;
+    text-align: center;
+    margin-top: 10px;
+}
+
+div.imageContainer{
+    height: 35%;
+    width: 50%;
+    margin: auto;
+}
+
+div.qrContainer img.qrImage{
+    width: 90px;
+    height: 90px;
+    margin: 15px 0;
+}
+
+
+
+div.carSummary{
+    margin-left: auto;
+}
+
+div.customerSummary, div.carSummary{
+    margin-right: auto;
+}
+
+div.summaryContainer div img{
+    width: 100%;
+    height: 100%;
+}
+
+div.summaryContainer div.detailsContainer table{
+    width: 100%;
+}
+
+div.detailsContainer table th.summaryLabel{
+    font-size: 18px;
+    width: 40%;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+div.detailsContainer table td.summaryDetail{
+    width: 60%;
+    text-align: left;
+    color: rgb(63, 63, 63);
+    font-size: 17px;
+}
+
+div.summaryContainer div.buttons button.editBtn,
+div.summaryContainer div.buttons button.viewRsBtn{
+    margin: 35px 9px;
+    background-color: rgba(255, 255, 255, 0.89);
+    padding: 11px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    border: none;
+    transition: ease 0.2s;
+    font-family: 'EB Garamond', serif;
+}
+
+div.summaryContainer div.buttons button.editBtn:hover,
+div.summaryContainer div.buttons button.viewRsBtn:hover{
+    outline: none;
+    background-color: rgb(27, 54, 1);
+    color: white;
+    border: none;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.815);
+    cursor: pointer;
+}
+
+div.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.buttons button.printBtn{
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    margin: 0 9px;
+}
+
+div.buttons button.printBtn img.printImg{
+    width: 40px;
+    height: 40px;
+    
+}
+
+
+
+
+
+

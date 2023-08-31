@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Libre+Franklin&display=swap');
+
+body{
+    font-family: 'EB Garamond', serif;
+    margin: 0;
+    position: relative;
+    min-height: 120%;
+    background: linear-gradient(0.3turn, rgb(0, 0, 0), rgba(91, 156, 71, 0.776), rgb(0, 0, 0));
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+div.navBar{
+    display: flex;
+    height: 77px;
+    background-color: rgba(1, 36, 4, 0.909);
+    color: antiquewhite;
+    font-size: 1.1rem;
+    top: 0;
+    z-index: 1;
+}
+
+div.navLinks div a{
+    padding: 1vh 0.5vw;
+}
+
+/* company logo */
+div.logo{
+    flex-grow: 1; /*specifies how much a flex item will grow relative to the rest of the flex items*/
+    margin-left: 6%;
+    
+}
+
+div.navBar div.logo a img{
+    height: 100%;
+    width: 100px;
+}
+
+div.navLinks{
+    flex-grow: 5;
+    display: flex;
+    justify-content: right;
+}
+
+div.navLinks div{
+    padding: 0px 2.2%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+div.logInOut a.logOutHyper, 
+div.logInOut a.logInHyper{
+    color: rgb(7, 71, 7);
+    background-color: rgb(247, 241, 233);
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color ease 0.4s, padding ease 0.4s;
+}
+
+div.logInOut a.logOutHyper:hover, 
+div.logInOut a.logInHyper:hover{
+    background-color: rgb(245, 242, 242);
+    padding: 1.2vh 1.0vw;
+}
+
+a.hyperlink3{
+    text-decoration: none;
+    color: rgb(238, 202, 156);
+    font-size: 18px;
+}
+
+a.hyperlink2{
+    background-image: linear-gradient(
+      to right,
+      #effae8,
+      #f0faf2 50%,
+      rgb(252, 231, 205) 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+  
+
+a.hyperlink2:before{
+    content: '';
+    background: #ffffff;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+  
+a.hyperlink2:hover{
+   background-position: 0;
+}
+  
+
+a.hyperlink2:hover::before{
+    width: 100%;
+}
+
+/* form container */
+div.mainContainer{
+    text-align: center;
+    align-items: center;
+}
+
+div.formContainer{
+    margin-top: 16vh;
+    align-items: center;
+    display: inline-block;
+    width: 45vw;
+    height: 260px;
+    border: 3px dashed rgb(212, 244, 210);
+    border-radius: 29px;
+    padding: 25px 48px;
+    background-color: rgba(227, 250, 227, 0.295);
+}
+
+label.formLabel{
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(52, 31, 1);
+    /* background-color: rgba(164, 238, 164, 0.667); */
+}
+
+div.formContainer input.inputReservationID{
+    margin-top: 20px;
+    padding: 12px 19px;
+    width: 70%;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    text-align: center;
+    font-size: 19px;
+    font-family: 'EB Garamond', serif;
+}
+
+div.formContainer input.inputReservationID:hover{
+    box-shadow: 0 0 1rem rgb(1, 90, 17), 0 0 2rem whitesmoke;
+}
+
+div.formContainer input.inputReservationID:focus{
+    box-shadow: 0 0 1rem rgb(1, 90, 17), 0 0 2rem whitesmoke, 0 0 4rem rgb(1, 43, 1);
+}
+
+div.formContainer input.submitReservationID{
+    font-family: 'EB Garamond', serif;
+    padding: 12px 23px;
+    margin-top: 20px;
+    border-radius: 19px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: rgb(231, 245, 231);
+}
+
+div.formContainer input.submitReservationID:hover{
+    background-color: rgb(246, 249, 246);
+    box-shadow: 0 0 2rem white;
+}
+
+div.formContainer span.notFound{
+    font-size: 19px;
+    color: rgba(134, 1, 1, 0.801)
+}
+
+div.formContainer div.qrHyperContainer{
+    position: relative;
+    display: inline-block;
+}
+
+div.formContainer a.qrCodeHyper{
+    color: rgb(61, 61, 61);
+}
+
+div.formContainer a.qrCodeHyper img{
+    
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 38px;
+    top: 30px;
+}
+
+
+/* summary container */
+div.summaryContainer{
+    margin: auto;
+    margin-top: 40px;
+    padding: 10px;
+    display: inline-block;
+    width: 60%;
+    height: 750px;
+    background: rgb(245, 239, 232);
+    border-radius: 35px;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.306), 0 6px 23px rgba(0, 0, 0, 0.329);
+    transition: box-shadow 0.4s ease;
+}
+
+div.summaryContainer:hover{
+    box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.662), 0 12px 27px rgba(0, 0, 0, 0.717);
+}
+
+div.summaryContainer h2.summaryHeader{
+    color: rgb(1, 52, 1);
+    text-shadow: 2px 2px #031a0044;
+    margin: 15px 0;
+    text-align: center;
+}
+
+div.summaryContainer h2.summaryHeader span{
+    font-size: 32px;
+    color: rgb(0, 14, 0);
+    font-style: italic;
+}
+
+div.summaryContainer h3{
+    font-size: 22px;
+    margin: 4px 0;
+    text-align: center;
+}
+
+div.detailsContainer{
+    display: flex;
+    text-align: center;
+    margin-top: 10px;
+}
+
+div.imageContainer{
+    height: 180px;
+    width: 280px;
+    margin: auto;
+}
+
+div.qrContainer img.qrImage{
+    width: 90px;
+    height: 90px;
+    margin: 15px 0;
+}
+
+div.carSummary{
+    margin-left: auto;
+}
+
+div.customerSummary, div.carSummary{
+    margin-right: auto;
+}
+
+div.summaryContainer div img{
+    width: 100%;
+    height: 100%;
+}
+
+div.summaryContainer div.detailsContainer table{
+    width: 100%;
+}
+
+div.detailsContainer table th.summaryLabel{
+    font-size: 18px;
+    width: 40%;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+div.detailsContainer table td.summaryDetail{
+    width: 60%;
+    text-align: left;
+    color: rgb(63, 63, 63);
+    font-size: 17px;
+}
+
+div.summaryContainer div.buttons button.editBtn,
+div.summaryContainer div.buttons button.viewRsBtn{
+    margin: 35px 9px;
+    background-color: rgba(255, 255, 255, 0.89);
+    padding: 11px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    border: none;
+    transition: ease 0.2s;
+    font-family: 'EB Garamond', serif;
+}
+
+div.summaryContainer div.buttons button.editBtn:hover,
+div.summaryContainer div.buttons button.viewRsBtn:hover{
+    outline: none;
+    background-color: rgb(27, 54, 1);
+    color: white;
+    border: none;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.815);
+    cursor: pointer;
+}
+
+div.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+div.buttons button.printBtn{
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    margin: 0 9px;
+}
+
+div.buttons button.printBtn img.printImg{
+    width: 40px;
+    height: 40px;
+}
+
+/* qr scanner */
+div.qrMainContainer{
+    margin-top: 20vh;
+    justify-content: center;
+}
+
+div.qrMainContainer h2{
+    text-align: center;
+    color: rgba(134, 1, 1, 0.801);
+}
+
+
+main {
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+#reader {
+    padding: 20px;
+    background-color: rgba(227, 250, 227, 0.295);
+    border: 3px dashed rgb(212, 244, 210);
+    border-radius: 29px;
+    position: relative;
+}
+
+#result {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+div.backContainer{
+    text-align: center;
+}
+
+a.keyInHyper img{
+    margin-top: 20px;
+    width: 50px;
+    height: 50px;
+}
+

@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@300&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Ibarra+Real+Nova:wght@500&family=Poppins:wght@300&display=swap%27');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: radial-gradient(circle, rgb(254, 232, 217)30%, rgb(251, 200, 216) 73%);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.slider{
+  position: absolute;
+  top: 100;
+  left: 100;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: rotate 60s linear infinite;
+}
+
+@keyframes rotate{
+0%{
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+100%{
+  transform: perspective(1000px) rotateY(360deg);
+}
+}
+
+.slider span{
+  position: absolute;
+  top: -40;
+  left: -50;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i)*45deg)) translateZ(350px);
+  /* animation-delay: 1s; */
+}
+
+.slider span img{
+  position: absolute;
+  top: -40;
+  left: -50;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  object-fit: cover;
+  transition: 2s;
+  box-shadow: 0 0 8px #fff;
+  -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
+  /* animation-delay: 1s; */
+}
+
+.slider span:hover img{
+  transform: translateY(-20px) scale(1.2);
+  }
+
+.button{
+  position: relative;
+  height: 200px;
+}
+
+.spin {
+  /* position: absolute; */
+  position: relative;
+  top: -100%;
+  left: 160%; 
+  /* transform: translate(-50%,-250%); */
+  width: 120px;
+  height: 75px;
+  border-radius: 20%;
+  border: 2px solid #ffa6af;
+  background-color: #fd7094;
+  color: rgb(250, 251, 175);
+  box-shadow: 0 5px 20px rgb(236, 236, 190);
+  padding-left: auto;
+  padding-right: auto;
+  font-weight: bold;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 1; 
+  font-family: 'Fugaz One';
+  letter-spacing: 2px;
+}
+
+.spin:hover{
+  letter-spacing: 4px;
+  background-color: #f5eb93;
+  color: #ffa6af;
+  border: #c58e16;
+  box-shadow: 0 5px 20px rgb(241, 222, 112);
+}
+
+.spin:active{
+    width: 120ox;
+    height: 65px;
+    font-size: 20px;
+} 
+
+.animate {
+  animation-duration: 1s;
+  animation-name: jiggle;
+  -webkit-animation-iteration-count: infinite;  
+  animation-iteration-count: 1;
+}
+
+@keyframes jiggle {
+  10%, 90% {
+    transform: translate(-1px, 1px);
+  }
+    
+  20%, 80% {
+    transform: translate(2px, -2px);
+  }
+  
+  30%, 50%, 70% {
+    transform: translate(-3px, 3px);
+  }
+  
+  40%, 60% {
+    transform: translate(3px, -3px);
+  }
+}
+
+audio{
+    display: none;
+}
+
+/* method1 */
+.modal{
+  position: relative;
+  top: 4%;
+  left: -3%;
+  width: 370px;
+  height: 420px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  z-index: 100;
+  transition: .4s;
+} 
+
+.modal .modal-body .close{
+  padding-left: 7px;
+}
+
+ .modal .modal-body h3{
+  padding-top: 5%;
+  color: black;
+  font-size: 27px;
+  text-align: center;
+  font-family: 'Ibarra Real Nova', serif;
+  font-weight: 1000;
+}
+
+.modal .modal-body p{
+  color: grey;
+  margin-top: 6%;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  font-family: 'Ibarra Real Nova', serif;
+  font-weight: 500;
+}
+
+.modal .modal-body #img{
+  width: 30%;
+  display: block;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.modal .modal-body .addtocart{
+  padding: 12px 100px;
+  margin-top: 1%;
+  margin-left: 12%;
+  text-align: center;
+  align-items: center;
+  background: #fd7094;
+  color: white;
+  font-size: 10pt;
+  border-radius: 6px;
+  transition: .4s;
+  font-family: 'Fugaz One';
+  cursor: pointer;
+}
+
+.modal .modal-body .addtocart:hover{
+  background: #ffa6af;
+} 
+
+.modal#hide {
+  opacity: 0;
+  transform: scale(.6);
+  pointer-events: none;
+}
+
+.modal#show{
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: visible;
+  transition-delay: 1s;
+} 
+
+.modal-body div.backToHomePage{
+  text-align: center;
+  margin-top: 13px;
+  font-size: 17px;
+}
+
+.modal-body a.homepage{
+  color: rgba(243, 104, 136, 0.769);
+  font-family: 'Ibarra Real Nova', serif;
+  transition: all 0.3s ease 0s;
+}
+
+.modal-body a.homepage:hover{
+  text-shadow: 2px 2px 5px rgb(247, 100, 146);
+  color: rgb(249, 70, 112);
+}
+
+#displayChoice{
+  margin-top: -6%;
+  background: -webkit-linear-gradient(pink, rgba(204, 4, 37, 0.851));
+  font-family: 'Fugaz One';
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+span:hover{
+  cursor: pointer;
+}
+
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.popup{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4);
+  z-index: 999;
+  display: none;
+}
+
+.popupinside{
+  background: white;
+  height: 300px;
+  width: 420px;
+  /* padding: 40px 40px; */
+  position: absolute;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 8px;
+  display: none;
+  text-align: center;
+  z-index: 1000;
+  overflow: auto; /* Enable scroll if needed */
+  /* letter-spacing: 10px; */
+}
+
+.popupinside .close1{
+  padding-left: 7px;
+  text-align: left;
+  float: left;
+}
+
+.popupinside #quesCake{
+  height: 120px;
+  width: 200px;
+  margin-top: 0%;
+  border-radius: 10%;
+  line-height: 5px;
+}
+
+.popupinside button{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+  background-color: transparent;
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: #f0eaaaec;
+  background: #fd7094;
+  box-shadow: 0 0 20px rgb(228, 64, 92);
+  border-radius: 10%;
+  width: 300px;
+  height: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: 'Fugaz One';
+  font-weight: 800;
+}
+
+.popupinside button:hover{
+  background: #f98ea9;
+  box-shadow: 0 0 20px rgb(226, 10, 46);
+  color: #faee68ec;
+  letter-spacing: 5px;
+
+  /* font-family: 'Fugaz One'; */
+}
+
+.popupinside h2{
+  display: inline-block;
+  margin-top: 3px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0.1em 0.1em 0 rgba(228, 212, 121, 0.901);
+  color: rgb(240 108 131);
+  font-family: 'Fugaz One';
+}
+
+.popupinside p{
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 3px;
+  font-size: 17px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Ibarra Real Nova', serif;
+  font-weight:60;
+  color: rgb(223, 116, 134);
+}
+
+
+
+

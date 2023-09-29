@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Customization.css">
+    <script src="customization.js" defer></script>
+    <!--script for icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!---->
+    <!--Fugaz One-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../../image/favicon.png">
+    <title>Cake Customization</title>
+    
+</head>
+<body>
+    <header>
+        <a href="../landing/landingpage.html"><img class="logo" src="../../image/logo.png"></a>
+        <div class="navigation">
+            <li><a class="actives" href="../landing/landingpage.html"><i class='fa fa-home'></i></a></li>
+            <li><a class="actives" href="../what-to-eat/what-to-eat.html"><i class='fa fa-random'><span class="span"> What To Eat</span></i></a></li>
+            <li><a class="actives" href="../customization/customization.html"><i class='fa fa-gift' ><span class="span"> Design A Cake</span></i></a></li>
+            <li><a class="actives" href="../aboutus/aboutus.html"><i class='fa fa-bookmark' ><span class="span"> About Us</span></i></a></li>
+            <li><a class="actives" href="../cart/cart.html"><i class="fa fa-shopping-cart" ></i></a></li>
+        </div>
+    </header>
+    <form data-multi-step action="customization.php" method="post">
+        <div class="container active" data-step>
+            <h2 class="step-title">Part 1: Choose the type of cake</h2>
+            <h3 class="step-subtitle">1. Please choose the type of cake</h3>
+            
+            <select id="type" class="floatleft" onchange="cakeType(this);" required>
+                <option value="Select" selected hidden>--Please select a type of cake--</option>
+                <option name="cakeType" value="Standard Cake" id="standardcake">Standard Cake</option>
+                <option name="cakeType" value="Special Cake" id="standardcake">Special Cake</option>
+            </select>
+            
+            <div id="standard-cake">
+                <label for="layer">How many layer of cake do you want? </label><br>
+                <div id="standard-cakes">
+                    <div id="Onelayer">
+                        <input type="radio" class="checkbox-tools1" id="one-layer" name="layer" value="1 layer">
+                        <label for="one-layer" >One layer 
+                        <img id="layer1" src="images/one-layer-cake.jpg" alt="One layer cake">
+                        </label><br>
+                    </div>
+                    <div id="Onelayer">
+                        <input type="radio" class="checkbox-tools1" id="two-layer" name="layer" value="2 layers">
+                        <label for="two-layer">Two layers 
+                        <img id="layer2" src="images/two-layer-cake.jpg" alt="Two layers cake">
+                        </label>
+                    </div>
+                </div>  
+            </div>
+            <div id="special-cake">
+                <label for="layer">Which type of special cake do you want? </label><br>
+                <div id="standard-cakes">
+                    <div id="Onelayer">
+                        <input type="radio" class="checkbox-tools1" id="pinata" name="layer" value="Pinata Cake">
+                        <label for="pinata">Pinata Cake 
+                        <img id="pinata-cake" src="images/pinata.jpg" alt="Pinata cake">
+                        </label><br>
+                    </div>
+                    <div id="Onelayer">
+                        <input type="radio" class="checkbox-tools1" id="crepe" name="layer" value="Crepe Cake">
+                        <label for="crepe">Crepe Cake
+                        <img id="crepe-cake" src="images/crepe.jpg" alt="Crepe cake">
+                        </label><br>
+                    </div>
+                </div>
+            </div>
+
+        
+            <h3 class="step-subtitle">2. Choose the size of your cake</h3>
+                <div class="radio">
+                    <input class="checkbox-tools" type="radio" id="size4" name="size" value="4 inches" required>
+                    <label for="size4">4 inches</label>
+                
+                    <input class="checkbox-tools" type="radio" id="size6" name="size" value="6 inches">
+                    <label for="size6">6 inches</label>
+                    
+                    <input type="radio"  class="checkbox-tools" id="size8" name="size" value="8 inches">
+                    <label for="size8">8 inches</label>
+                </div>
+
+            
+            <button type="button" class="next" data-next>Next</button>
+        </div>
+        <div class="container" data-step>
+            <h3 class="step-title">Part 2: Customize the Flavour of your cake</h3>
+                <div class="cake-shape">
+                    <div class="bottom" id="cake-bottom"></div>
+                    <div class="middle" id="cake-middle"></div>
+                    <div class="top" id="cake-top"></div>
+                    <div id="cream">
+                        <div class="icing"></div>
+                        <div class="drip drip1"></div>
+                        <div class="drip drip2"></div>
+                        <div class="drip drip3"></div>
+                        <div class="drip drip4"></div>
+                        <div class="drip drip5"></div>
+                    </div>
+                    <div id="toppings">
+                        <div id="nuts-topping">
+                            <div class="hazelnut1"></div>
+                            <div class="hazelnut2"></div>
+                            <div class="hazelnut3"></div>
+                            <div class="hazelnut4"></div>
+                        </div>
+                        <div id="sprinkle">
+                            <div class="sprinkle1"></div>
+                            <div class="sprinkle2"></div>
+                            <div class="sprinkle3"></div>
+                            <div class="sprinkle4"></div>
+                            <div class="sprinkle5"></div>
+                            <div class="sprinkle6"></div>
+                        </div>
+                        <div id="fruit-topping">
+                            <div class="cherry1"></div>
+                            <div class="cherry2"></div>
+                        </div>
+                        
+                        <div class=""></div>
+                        <div class=""></div>
+                    </div>
+                </div>
+                <div class="cake-flavour">
+                    <h3 class="step-subtitle">3. Please choose the flavour of the cake</h3>
+                    <input class="checkbox-tools" type="radio" name="flavour" id="vanilla-flavour"onclick="changeCaketoWhite();" value="vanilla" checked>
+					<label class="vanilla-flavour" for="vanilla-flavour">Vanilla</label>
+                    <input class="checkbox-tools" type="radio" id="orange-flavour" name="flavour" onclick="changeCaketoOrange();" value="orange">
+                    <label for="orange-flavour"> Orange </label>
+                    <input class="checkbox-tools" type="radio" id="cheese-flavour" name="flavour" onclick="changeCaketoYellow(); " value="cheese">
+                    <label for="cheese-flavour">Cheese</label>
+                    <input class="checkbox-tools" type="radio" id="redvelvet-flavour" name="flavour" onclick="changeCaketoRed(); " value="redvelvet">
+                    <label for="redvelvet-flavour">Red Velvet</label>
+                    <input class="checkbox-tools" type="radio" id="strawberry-flavour" name="flavour" onclick="changeCaketoPink();" value="strawberry">
+                    <label for="strawberry-flavour">Strawberry</label>
+                    <input class="checkbox-tools" type="radio" id="chocolate-flavour" name="flavour" onclick="changeCaketoChocolate();  " value="chocolate">
+                    <label for="chocolate-flavour">Chocolate</label>
+                    <input class="checkbox-tools" type="radio" id="matcha-flavour" name="flavour" onclick="changeCaketoGreen(); " value="matcha">
+                    <label for="matcha-flavour">Matcha</label>
+                </div>
+                <div class="icing-colour">
+                    <h3 class="step-subtitle">4. Please choose the colour of the icing</h3><br>
+                    <input class="checkbox-tools" type="radio" id="white-icing" name="colour" onclick="whiteIcing(); " value="white">
+                    <label for="white-icing">White</label>
+                    <input class="checkbox-tools" type="radio" id="yellow-icing" name="colour" onclick="yellowIcing(); " value="yellow">
+                    <label for="yellow-icing">Yellow</label>
+                    <input class="checkbox-tools" type="radio" id="orange-icing" name="colour" onclick="orangeIcing(); " value="orange">
+                    <label for="orange-icing">Orange</label>
+                    <input class="checkbox-tools" type="radio" id="red-icing"name="colour" onclick="redIcing(); " value="red">
+                    <label for="red-icing">Red</label>
+                    <input class="checkbox-tools" type="radio" id="pink-icing" name="colour" onclick="pinkIcing(); " value="pink">
+                    <label for="pink-icing">Pink</label>
+                    <input class="checkbox-tools" type="radio" id="purple-icing" name="colour" onclick="purpleIcing(); " value="purple">
+                    <label for="purple-icing">Purple</label>
+                    <input class="checkbox-tools" type="radio" id="blue-icing" name="colour" onclick="blueIcing(); " value="blue">
+                    <label for="blue-icing">Blue</label>
+                    <input class="checkbox-tools" type="radio" id="green-icing" name="colour" onclick="greenIcing(); " value="green">
+                    <label for="green-icing">Green</label>
+                    <input class="checkbox-tools" type="radio" id="chocolate-icing" name="colour" onclick="chocolateIcing(); " value="chocolate">
+                    <label for="chocolate-icing">Chocolate</label>
+                </div>
+                <div class="toppings">
+                    <h3 class="step-subtitle">5. Add some toppings to your cake</h3>
+                    <input class="checkbox-tools" type="radio" id="nuts" name="toppings" onclick="addNuts(); " value="nuts">
+                    <label for="nuts">Nuts</label>
+                    <input class="checkbox-tools" type="radio" id="sprinkles" name="toppings" onclick="addSprinkles();" value="sprinkles">
+                    <label for="sprinkles">Sprinkles</label>
+                    <input class="checkbox-tools" type="radio" id="fruits" name="toppings" onclick="addFruits();" value="fruits">
+                    <label for="fruits">Fruits</label>
+                </div>
+                <div class="theme">
+                    <h3 class="step-subtitle">6. Please choose the theme of your cake</h3>
+                    <input class="checkbox-tools1" type="radio" id="emoji" name="cake-theme" value="Emoji or Sticker">
+                    <label for="emoji">Emoji/sticker
+                    <img id="sticker" src="images/emoji.jpg" alt="Emoji or sticker cake"><br>
+                    </label>
+                    <input class="checkbox-tools1" type="radio" id="character" name="cake-theme" value="Character">
+                    <label for="character">Character
+                    <img id="character-cake" src="images/character.jpg" alt="Character cake"><br>
+                    </label>
+                    <input class="checkbox-tools1" type="radio" id="others" name="cake-theme" value="Others" onclick="enableTextBot()">
+                    <label for="others">Others
+                    <input type="text" id="idea" placeholder="State your ideas" disabled>
+                    </label>
+                </div>
+                <div class="add-on">
+                    <h3 class="step-subtitle">7. Any add-ons?</h3>
+                    <textarea name="add-ons" id="add-ons" cols="40" rows="5" class="addon"></textarea>
+                </div>
+            <button type="button" class="previous" data-previous>Previous</button>
+            <button type="button" class="next" id="next2" data-next onclick="displayOrder()">Next</button>
+        </div>
+        <div class="container" data-step>
+            <h3 class="step-title">Part 3: Confirm your order</h3>
+            <table>
+                <th colspan="2">Part 1: Style of Cake</th>
+                <tr>
+                    <td>Type of Cake</td>
+                    <td id="selectedType"></td>
+                </tr>
+                <tr>
+                    <td>Layer of Cake / Type of Special Cake</td>
+                    <td id="layers"></td>
+                </tr>
+                <tr>
+                    <td>Size of Cake</td>
+                    <td id="inches"></td>
+                </tr>
+                <th colspan="2">Part 2: Flavour of cake</th>
+                <tr>
+                    <td>Flavour of Cake</td>
+                    <td id="flat-cake-flavour"></td>
+                </tr>
+                <tr>
+                    <td>Colour of Icing</td>
+                    <td id="icingColour"></td>
+                </tr>
+                <tr>
+                    <td>Toppings</td>
+                    <td id="cakeTopping"></td>
+                </tr>
+                <tr>
+                    <td>Theme of Cake</td>
+                    <td id="finalTheme"></td>
+                </tr>
+                <tr>
+                    <td>Add-ons</td>
+                    <td id="displayAddOn"></td>
+                </tr>
+            </table>
+            
+            <button type="button" class="previous" data-previous>Previous</button>
+            <button class="buttonss"><a href="" class="AddtoC">Add to Cart</a></button>
+        </div>
+    </form>
+</body>
+</html>

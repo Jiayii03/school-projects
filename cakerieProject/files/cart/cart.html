@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="icon" type="image/png" href="../../image/favicon.png">
+    <link rel="stylesheet" href="cart2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Fugaz One-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="body">
+        <!-- navbar -->
+        <header>
+            <a href="../landing/landingpage.html"><img class="logo" src="../../image/logo.png"></a>
+            <div class="navigation">
+                <li><a class="actives" href="../landing/landingpage.html"><i class='fa fa-home'></i></a></li>
+                <li><a class="actives" href="../what-to-eat/what-to-eat.html"><i class='fa fa-random'><span class="span"> What To Eat</span></i></a></li>
+                <li><a class="actives" href="../customization/customization.html"><i class='fa fa-gift' ><span class="span"> Design A Cake</span></i></a></li>
+                <li><a class="actives" href="../aboutus/aboutus.html"><i class='fa fa-bookmark' ><span class="span"> About Us</span></i></a></li>
+                <li><a class="actives" href="../cart/cart.html"><i class="fa fa-shopping-cart" ></i></a></li>
+            </div>
+        </header>
+        <h1>Shopping Cart</h1>
+        <div class="main-container">
+            <div class="cards-container">
+                <div class="cards-container-1">
+                    <div class="cards">
+                        <div class="card-image card-image-1">
+                        </div>
+                        <div class="card-text">
+                            <span class="size">8-inch</span>
+                            <h3>Carrot Walnut Cake</h3>
+                            <p>A gorgeous two layer soft and moist Carrot Cake. You’ll love this one bowl carrot cake made with brown sugar, warm spices.</p>
+                        </div>
+                        <div class="card-stats">
+                            <div class="stat">
+                                <div class="quantity">  
+                                    <p>Quantity:</p>
+                                    <i class="fa fa-toggle-down" onclick="this.parentNode.querySelector('input[type=number]').stepDown(); calculateTotalPrice(0, 66.60); calculateSubtotal(); calculateGrandTotal()"></i>
+                                            
+                                    <input id="form1" min="1" name="quantity" value="1" type="number" class="input_quantity"/>
+                                            
+                                    <i class="fa fa-toggle-up" onclick="this.parentNode.querySelector('input[type=number]').stepUp(); calculateTotalPrice(0, 66.60); calculateSubtotal(); calculateGrandTotal()"></i> 
+                                            
+                                    <button class="hidden_btn" onclick="calculateTotalPrice(0, 66.60); calculateGrandTotal()"></button>
+                                </div>
+                                    </div>
+                            <div class="stat border">
+                                <div class="price">
+                                    <p class="price_p">Total Price:</p>
+                                    <p class="total_price"><span>RM</span><span class="specific_price"> 66.60</span></p>
+                                </div>
+                            </div>
+                            <div class="stat">
+                                <div class="remove">
+                                    <p class="remove_p">Remove:</p>
+                                    <i class="fa fa-trash btn-remove"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="card-image card-image-2">
+                        </div>
+                        <div class="card-text">
+                            <span class="size">8.5-inch</span>
+                            <h3>Orea Cream Chiffon</h3>
+                            <p>A perfect combo of moist chocolate cake from scratch layered made with crushed Oreo cookies.</p>
+                        </div>
+                        <div class="card-stats">
+                            <div class="stat">
+                                <div class="quantity">
+                                    <p>Quantity:</p>
+                                    <i class="fa fa-toggle-down" onclick="this.parentNode.querySelector('input[type=number]').stepDown(); calculateTotalPrice(1, 90.50); calculateSubtotal(); calculateGrandTotal()"></i>
+                                            
+                                    <input id="form1" min="1" name="quantity" value="1" type="number"
+                                    class="input_quantity"/>
+                                            
+                                    <i class="fa fa-toggle-up" onclick="this.parentNode.querySelector('input[type=number]').stepUp(); calculateTotalPrice(1, 90.50); calculateSubtotal(); calculateGrandTotal()"></i>  
+                                            
+                                    <button class="hidden_btn" onclick="calculateTotalPrice(1, 90.50); calculateGrandTotal()"></button>
+                                </div>
+                            </div>
+                            <div class="stat border">
+                                <div class="price">
+                                    <p class="price_p">Total Price:</p>
+                                    <p class="total_price"><span>RM</span><span class="specific_price"> 90.50</span></p>
+                                </div>
+                            </div>
+                            <div class="stat">
+                                <div class="remove">
+                                    <p class="remove_p">Remove:</p>
+                                    <i class="fa fa-trash btn-remove"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="card-image card-image-3">
+                        </div>
+                        <div class="card-text">
+                            <span class="size">6-inch</span>
+                            <h3>Pandan Cream Chiffon</h3>
+                            <p>Moistened and flavoured with coconut milk and pandan juice, giving the cake its rich and creamy flavours.</p>
+                        </div>
+                        <div class="card-stats">
+                            <div class="stat">
+                                <div class="quantity">
+                                    <p>Quantity:</p>
+                                    <i class="fa fa-toggle-down" onclick="this.parentNode.querySelector('input[type=number]').stepDown(); calculateTotalPrice(2, 45.50); calculateSubtotal(); calculateGrandTotal()"></i>
+                                            
+                                    <input id="form1" min="1" name="quantity" value="1" type="number"
+                                    class="input_quantity"/>
+                                            
+                                    <i class="fa fa-toggle-up" onclick="this.parentNode.querySelector('input[type=number]').stepUp(); calculateTotalPrice(2, 45.50); calculateSubtotal(); calculateGrandTotal()"></i>  
+                                            
+                                    <button class="hidden_btn" onclick="calculateTotalPrice(2, 45.50); calculateGrandTotal()"></button>
+                                </div>
+                            </div>
+                            <div class="stat border">
+                                <div class="price">
+                                    <p class="price_p">Total Price:</p>
+                                    <p class="total_price"><span>RM</span><span class="specific_price"> 45.50</span></p>
+                                </div>
+                            </div>
+                            <div class="stat">
+                                <div class="remove">
+                                    <p class="remove_p">Remove:</p>
+                                    <i class="fa fa-trash btn-remove"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards-container-2">
+                    <div class="cards">
+                        <div class="card-image card-image-4">
+                        </div>
+                        <div class="card-text">
+                            <span class="size">7.5-inch</span>
+                            <h3>Mango Cream Chiffon</h3>
+                            <p>Mango cake with fluffy whipped cream, juicy mangoes, intensely flavorful secret sauce.</p>
+                        </div>
+                        <div class="card-stats">
+                            <div class="stat">
+                                <div class="quantity">
+                                    <p>Quantity:</p>
+                                    <i class="fa fa-toggle-down" onclick="this.parentNode.querySelector('input[type=number]').stepDown(); calculateTotalPrice(3, 76.90); calculateSubtotal(); calculateGrandTotal()"></i>
+                                            
+                                    <input id="form1" min="1" name="quantity" value="1" type="number"
+                                    class="input_quantity"/>
+                                            
+                                    <i class="fa fa-toggle-up" onclick="this.parentNode.querySelector('input[type=number]').stepUp(); calculateTotalPrice(3, 76.90); calculateSubtotal(); calculateGrandTotal()"></i>   
+        
+                                    <button class="hidden_btn" onclick="calculateTotalPrice(3, 76.90); calculateGrandTotal()"></button>
+                                </div>
+                            </div>
+                            <div class="stat border">
+                                <div class="price">
+                                    <p class="price_p">Total Price:</p>
+                                    <p class="total_price"><span>RM</span><span class="specific_price"> 76.90</span></p>
+                                </div>
+                            </div>
+                            <div class="stat">
+                                <div class="remove">
+                                    <p class="remove_p">Remove:</p>
+                                    <i class="fa fa-trash btn-remove"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="card-image card-image-5">
+                        </div>
+                        <div class="card-text">
+                            <span class="size">8-inch</span>
+                            <h3>Strawberry Cream Chiffon</h3>
+                            <p>Consists of a shortcake or biscuits layered with fresh strawberries and topped with whipped cream.</p>
+                        </div>
+                        <div class="card-stats">
+                            <div class="stat">
+                                <div class="quantity">
+                                    <p>Quantity:</p>
+                                    <i class="fa fa-toggle-down" onclick="this.parentNode.querySelector('input[type=number]').stepDown(); calculateTotalPrice(4, 89.90); calculateSubtotal(); calculateGrandTotal()"></i>
+                                            
+                                    <input id="form1" min="1" name="quantity" value="1" type="number"
+                                    class="input_quantity"/>
+                                            
+                                    <i class="fa fa-toggle-up" onclick="this.parentNode.querySelector('input[type=number]').stepUp(); calculateTotalPrice(4, 89.90); calculateSubtotal(); calculateGrandTotal()"></i>   
+        
+                                    <button class="hidden_btn" onclick="calculateTotalPrice(4, 89.90); calculateGrandTotal()"></button>
+                                </div>
+                            </div>
+                            <div class="stat border">
+                                <div class="price">
+                                    <p class="price_p">Total Price:</p>
+                                    <p class="total_price btn-remove"><span>RM</span><span class="specific_price"> 89.90</span></p>
+                                </div>
+                            </div>
+                            <div class="stat">
+                                <div class="remove">
+                                    <p class="remove_p">Remove:</p>
+                                    <i class="fa fa-trash btn-remove"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="card-image card-image-6">
+                        </div>
+                        <div class="card-text">
+                            <span class="size">8-inch</span>
+                            <h3>Chocoreo Cream Chiffon</h3>
+                            <p>With real chocolatey flavour from natural cocoa, this cake is moist, tender and super fluffy..</p>
+                        </div>
+                        <div class="card-stats">
+                            <div class="stat">
+                                <div class="quantity">
+                                    <p>Quantity:</p>
+                                    <i class="fa fa-toggle-down" onclick="this.parentNode.querySelector('input[type=number]').stepDown(); calculateTotalPrice(5, 87.50); calculateSubtotal(); calculateGrandTotal()"></i>
+                                            
+                                    <input id="form1" min="1" name="quantity" value="1" type="number"
+                                    class="input_quantity"/>
+                                            
+                                    <i class="fa fa-toggle-up" onclick="this.parentNode.querySelector('input[type=number]').stepUp(); calculateTotalPrice(5, 87.50); calculateSubtotal(); calculateGrandTotal()"></i>   
+                                            
+                                    <button class="hidden_btn" onclick="calculateTotalPrice(5, 87.50); calculateGrandTotal()"></button>
+                                </div>
+                            </div>
+                            <div class="stat border">
+                                <div class="price">
+                                    <p class="price_p">Total Price:</p>
+                                    <p class="total_price"><span>RM</span><span class="specific_price"> 87.50</span></p>
+                                </div>
+                            </div>
+                            <div class="stat">
+                                <div class="remove">
+                                    <p class="remove_p">Remove:</p>
+                                    <i class="fa fa-trash btn-remove"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="summary-container">
+                <div class="summary">
+                    <h2 class="summary_items">ORDER SUMMARY <br>ITEM(S) </h2>
+                    <table>
+                        <tr>
+                            <td>Items Subtotal: </td>
+                            <td class="subtotal">RM <span class="subtotal_span"> 456.90</span></td>
+                        </tr>
+                        <tr>
+                            <td>Service tax (6%): </td>
+                            <td class="service_tax">RM <span class="service_tax_span"> 27.41</span></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Shipping option: <br>
+                                <div class="select-box">
+                                    <div class="options-container">
+                                        <div class="option">
+                                            <input type="radio" class="radio" id="standard"
+                                            name="shipping_option" onclick="displayShippingFee(); calculateGrandTotal()">
+                                            <label for="standard" value="standard_delivery">Standard Delivery - 5 Days</label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="radio" class="radio" id="express" name="shipping_option" onclick="displayShippingFee(); calculateGrandTotal()">
+                                            <label for="express" value="express_delivery">Express Delivery - 2 Days</label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="radio" class="radio" id="self" name="shipping_option" onclick="displayShippingFee(); calculateGrandTotal()">
+                                            <label for="self" value="self_pickup">Self Pickup - Free of Charge</label>
+                                        </div>
+                                    </div>
+                                    <div class="selected">
+                                        Select a shipping option
+                                    </div>
+                                </div>
+                                <hr>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="discount">
+                                <label for="input_code">Discount Code:</label>
+                                <input type="text" class="input_code" id="input_code" name="discount_code" value="" placeholder="Enter code here : ABCDE"><br>
+                                <button class="discount_button" onclick="checkDiscountCode(); calculateGrandTotal()">Apply</button>
+                                <hr>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Shipping Fee:</td>
+                            <td class="shipping_fee">RM <span class="shipping_fee_span">5.50</span></td>
+                        </tr>
+                        <tr class="discount_row">
+                            <td>Discount:</td>
+                            <td class="discount_price">- RM <span class="discount_price_span">0.00</span></td>
+                        </tr>
+                        <tr>
+                            <td>TOTAL: </td>
+                            <td class="grand_total">RM <span class="grand_total_span">489.81</span></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <button class="checkout_button" id="checkout_button" onclick="alertSpinningWheel()">PROCEED TO CHECKOUT</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="cart2.js"></script>
+</body>
+</html>

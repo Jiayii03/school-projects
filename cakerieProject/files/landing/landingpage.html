@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cakerie</title>
+    <link rel="stylesheet" href="landingpage2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!--Fugaz One-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" 
+    rel="stylesheet">
+    <link rel="icon" type="image/png" href="../../image/favicon.png">
+</head>
+
+<body>
+  <div class="body">
+    <!-- navbar -->
+    <header>
+      <a href="landingpage.html"><img class="logo" src="image_landing/logo.png"></a>
+      <div class="navigation">
+              <li><a class="actives" href="landingpage.html"><i class='fa fa-home'></i></a></li>
+              <li><a class="actives" href="../what-to-eat/what-to-eat.html"><i class='fa fa-random'><span class="span"> What To Eat</span></i></a></li>
+              <li><a class="actives" href="../customization/customization.html"><i class='fa fa-gift' ><span class="span"> Design A Cake</span></i></a></li>
+              <li><a class="actives" href="../aboutus/aboutus.html"><i class='fa fa-bookmark' ><span class="span"> About Us</span></i></a></li>
+              <li><a class="actives" href="../cart/cart.html"><i class="fa fa-shopping-cart" ></i></a></li>
+      </div>
+    </header>
+    <section>
+      <div class="slidercontainer">
+        <div class="slider-container">
+          <div class="slider" id="slider">
+          <a href="#"><img src="image_landing/bglandingpage.png" class="image" width="1005" height="720" alt="Welcome"></a>
+          </div>
+          <div class="slider" id="slider">
+            <a href="#"><img src="image_landing/bglandingpage5.png" class="image" width="1005" height="720" alt="Promotion1"></a>
+          </div>
+          <div class="slider" id="slider">
+            <a href="#"><img src="image_landing/bglandingpage7.png" class="image" width="1005" height="720" alt="Promotion2"></a>
+          </div>
+          <div class="prev-button" onclick="plusSlide(-1)">&#10094;</div>
+          <div class="next-button" onclick="plusSlide(1)">&#10095;</div>
+          <div class="lines">
+            <div class="line" onclick="currentSlide(1)"></div>
+            <div class="line"onclick="currentSlide(2)"></div>
+            <div class="line"onclick="currentSlide(3)"></div>
+          </div>
+        </div>
+      </div>
+      <script src="landingpage.js"></script>
+    </section>
+    <section>
+      <h1 class="heading1">Top Product</h1>
+      <div class="firstcolumn">
+        <div class="card-container">
+          <div class="card inside">
+            <div class="cardtext">
+              <span class="card-number card-circle subtle">01</span>
+              <span class="card-author subtle">Top Seller</span>
+              <h2 class="card-title">Customization Cake</h2>
+              <span class="card-description subtle">Looking for a customizable cake for someone’s birthday? Anniversary? Wedding?You’ve came to the right place.</span>
+              <div class="card-read"><a href="#">Read More</a></div>
+            </div>
+            <img src="image_landing/Picture1.png" alt="" class="card-media" width="283" height="338"/>
+          </div>
+          <div class="card-shadow"></div>
+        </div>
+        <div class="card-container">
+          <div class="card inside">
+            <div class="cardtext">
+              <span class="card-number card-circle subtle">02</span>
+              <span class="card-author subtle">Top Seller</span>
+              <h2 class="card-title">BurntCheese Cake</h2>
+              <span class="card-description subtle">The burnt surface lends a distinct and identifiable aroma to the richness, reminiscent of salted caramel or browned butter.</span>
+              <div class="card-read"><a href="#">Read More</a></div>
+            </div>
+            <img src="image_landing/Picture2.png" alt="" class="card-media" width="283" height="338"/>
+          </div>
+          <div class="card-shadow"></div>
+        </div>
+          
+        <div class="card-container">
+          <div class="card inside">
+            <div class="cardtext">
+              <span class="card-number card-circle subtle">03</span>
+              <span class="card-author subtle">Top Seller</span>
+              <h2 class="card-title">Pinata Cake</h2>
+              <span class="card-description subtle">A shell-based cake that has been filled with some fun treats such as chocolates, sprinkles and other edible components.</span>
+              <div class="card-read"><a href="#">Read More</a></div>
+            </div>
+            <img src="image_landing/Picture3.png" alt="" class="card-media" width="283" height="338"/>
+          </div>
+          <div class="card-shadow"></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h1 class="heading1">Recommend</h1>
+      <div class="recommend">
+        <div class="recommend1" id="recommend1"><img src="image_landing/recommend2.png" width="153" height="143"></div>
+        <div class="recommend2" id="recommend2"><img src="image_landing/recommend1.png" width="150" height="149"></div>
+        <div class="recommend2" id="recommend3"><img src="image_landing/recommend4.png" width="153" height="143"></div>
+      </div>
+    </section>
+      
+    <section class="contactuss">
+      <form class="feedbackForm" action="../feedback/DBInsertRecord.php" method="post" autocomplete="off">
+      <div>
+        <h3>Feedback Form</h3><br>
+        <label for="name">Name<br></label>
+        <input type="text" class="name_feedback details" id="name" name="name" required/><br><br>
+        <label for="number">Phone Number<br></label>
+        <input type="text" class="number_feedback details" id="number" name="contact_number" required><br><br>
+        <label for="email">E-mail<br></label>
+        <input type="email" class="email_feedback details" id="email" name="email" required><br><br>
+        <label for="feedback">Feedback<br></label>
+        <textarea name="feedback" id="feedback" class="details" required></textarea><br>
+        <input type="submit" id="submitButton" class="submitButton" name="submitButton" href="#popup1" value="Submit">
+      </div>
+      </form>
+  
+      <div class="mapss">  
+        <div class="wearehere">WE ARE HERE</div><br>
+        <div class="operationtime">MON - FRI 8:30AM - 5:30PM</div><br>
+        <br>
+        <div id="googleMap" class="googlemap">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.6936644740094!2d102.94302461489129!3d1.8699269602042805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d050d61e92be17%3A0x88f0a039b6891900!2sProvence%20Cake%20%26%20Pastries!5e0!3m2!1sen!2smy!4v1657387711158!5m2!1sen!2smy" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      
+        <div class="list">
+          <div class="places_container">
+            <div class="iconcontactus"><i class="fa">&#xf041;</i></div>
+            <div class="office">Our Office</div>
+            <div class="office_value">Batu Pahat</div>
+          </div>
+          <div class="phone_container">
+            <div class="iconcontactus"><i class="fa">&#x260E;</i></div>
+            <div class="phone">Phone Number</div>
+            <div class="phone_value">+60 12-345 6789</div>
+          </div>
+          <div class="email_container">
+            <div class="iconcontactus"><i class="fa fa-envelope"></i></div>
+            <div class="email">Email</div>
+            <div class="email_value">cakerie@gmail.com</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

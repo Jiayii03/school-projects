@@ -1,0 +1,110 @@
+body{
+    /* background: radial-gradient(circle, rgb(246, 254, 159)23%, rgb(253, 228, 66)73%); */
+    background: radial-gradient(circle, rgb(250 250 250)23%, rgb(220 146 239 / 21%)73%);
+    margin: 30px;
+}
+
+table, td{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table{
+    margin: auto;
+    width: 80%;
+}
+
+div.header{
+    text-align: center;
+}
+
+td, th{
+    padding: 10px 10px;
+    /* border: 1px solid rgb(219, 6, 88); */
+    font-size: 15px;
+}
+
+th{
+    font-size: 17px;
+}
+
+.contactNumber{
+    width: 130px;
+}
+
+th:nth-of-type(odd){
+    background-color: rgb(248, 210, 217);
+}
+
+th:nth-of-type(even), td:nth-of-type(even){
+    background-color: rgb(250, 250, 250);
+}
+
+tr.details td:nth-of-type(odd){
+    background-color: rgb(249, 232, 235);
+}
+
+.confirmation-container{
+    position: absolute;
+    top: 90px;
+    left: 270px;
+    height: 70vh;   
+    width: 60%;
+    /* background: radial-gradient(circle, rgb(248, 244, 246)20%, rgb(250, 195, 210) 73%); */
+    background: whitesmoke;
+    border-radius: 20px;
+    box-shadow: 14px 14px 17px rgb(244, 176, 187), -14px -14px 17px rgb(244, 176, 187);
+    transition: all 0.2s ease 0s;
+}
+
+.confirmation-container:hover{
+    transform: scale(1.02);
+    box-shadow: 15px 15px 20px rgb(247, 163, 177), -15px -15px 20px rgb(250, 155, 170);
+}
+
+.header{
+    padding: 20px;
+}
+
+.header h1{
+    color: rgb(246, 82, 123);
+    font-style: italic;
+}
+
+.header p{
+    font-size: 17px;
+    opacity: 0.8;
+}
+
+th{
+    opacity: 0.8;
+}
+
+.btns{
+    margin-top: 60px;
+    text-align: center;
+}
+
+.btns button{
+    margin: 15px;
+    padding: 9px 20px;
+    border-radius: 8px;
+    border: 0px;
+    font-size: 16px;
+    transition: all 0.3s ease 0s;
+    box-shadow: 3px 3px 5px rgb(178, 178, 178), -1px -1px 3px rgb(178, 178, 178);
+    color: rgb(239, 146, 163);
+}
+
+.btns button:hover{
+    cursor: pointer;
+    transform: scale(1.08);
+    box-shadow: 5px 5px 8px rgb(178, 178, 178);
+    background:rgb(247, 136, 154);
+    color: white;
+}
+
+tr.btns td{
+    padding-top: 50px;
+    background: whitesmoke;
+}

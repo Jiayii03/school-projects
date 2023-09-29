@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What-to-eat?</title>
+    <link rel="stylesheet" href="what-to-eat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Fugaz One-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../../image/favicon.png">
+</head>
+<body>
+    <!-- navbar -->
+    <script src="what-to-eat.js"></script>
+
+    <div class="popup"></div>
+    <div class="popupinside">
+        <span class="close1" id="close1" onclick="closePopUp()">&times;</span><br>
+        <img src="quesCake.jpg" alt="quesCake" id="quesCake">
+        <h2>Not sure what-to-eat?</h2>
+        <p>We are here to help YOU!</p>
+        <button id="close" onclick="closePopUp()">Ready to Spin</button>
+    </div>
+
+    <div class="button"><button class="spin" id="btn" value="spin" onclick="shuffle(); showModal(); randomChoice();">SPIN</button></div>
+
+    
+    <div class="modal" id="hide">
+        <div class="modal-body">
+            <span class="close" id="close" onclick="closeModal(); reloadPage();">&times;</span><br>
+            <img src="logofinal.png" alt="logo" id="img">
+            <h3 class="title">Cake of the day<br> for you is</h3>
+            <h3 id="displayChoice"> </h3>
+            <p>Click the button to add to cart</p>
+            <button class="addtocart" id="addtocart" value="addtocart" onclick="linkToCart()">Add To Cart</button>
+            <div class="backToHomePage">
+                <a class="homepage" href="../landing/landingpage.html"><i class='fa fa-home'> Back to Home Page</i></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="slider" id="slider">
+        <!-- <div class="lala"> -->
+        <span style="--i:1;" class="pic p1"><img src="https://cdn.discordapp.com/attachments/995213845633171527/995214000545603604/IMG_9872.png" alt="img1"></span>
+        <span style="--i:2;" class="pic p2"><img src="https://cdn.discordapp.com/attachments/995213845633171527/995214000927277086/IMG_9870.png" alt="img2"></span>
+        <span style="--i:3;" class="pic p3"><img src="https://cdn.discordapp.com/attachments/995213845633171527/995214001359306773/IMG_9869.png" alt="img3"></span>
+        <span style="--i:4;" class="pic p4"><img src="https://cdn.discordapp.com/attachments/995213845633171527/995214001787129956/IMG_9868.png" alt="img4"></span>
+        <span style="--i:5;" class="pic p5"><img src="https://cdn.discordapp.com/attachments/995213845633171527/995214002227515402/IMG_9867.png" alt="img5"></span>
+        <span style="--i:6;" class="pic p6"><img src="https://cdn.discordapp.com/attachments/995213845633171527/995214002550489188/IMG_9866.png" alt="img6"></span>
+        <span style="--i:7;" class="pic p7"><img src="https://cdn.discordapp.com/attachments/995213845633171527/995214003364171906/IMG_9864.png" alt="img7"></span>
+        <span style="--i:8;" class="pic p8"><img src="https://cdn.discordapp.com/attachments/995213845633171527/995214003041206402/IMG_9865.png" alt="img8"></span>
+        <!-- </div> -->
+    </div>
+    
+    
+    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+    <div class="audio"><audio controls="controls" id="wheelspin" src="/elements/wheelspin.mp3" type="mp3"></audio>
+
+</body>
+</html>

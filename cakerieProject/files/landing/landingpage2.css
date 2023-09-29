@@ -1,0 +1,657 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@300&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Ibarra+Real+Nova:wght@500&family=Poppins:wght@300&display=swap%27');
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: rgb(255, 243, 235);
+}
+
+.body{
+  height: 800px;
+}
+
+/* navbar */
+header{
+  box-sizing:border-box;
+  z-index:999;
+  top:0%;
+  left: 0%;
+  width: 100%;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 20px;
+  transition: 0.5s ease;
+}
+
+.navigation{
+  float:right;
+}
+
+li{
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  animation: out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+
+.fa-home,.fa-random,.fa-gift,.fa-shopping-cart{
+  font-size:24px;
+  color:rgba(255 80 110);
+}
+
+.actives{
+  color:rgba(255 80 110);
+  text-decoration: none;
+}
+
+li i.fa{
+  transition: all 0.3s ease 0s;
+}
+
+div.navigation li span{
+  font-family: 'Fugaz One';
+  font-weight: 200px;
+  font-size: 16px;
+  text-shadow: 0.1em 0.1em 0 rgb(248, 191, 200);
+  /* transition: all 0.3s ease 0s; */
+}
+
+div.navigation li span:hover{
+  font-size: 19px;
+  text-shadow: 0.1em 0.1em 0 #FF8700;
+}
+
+li .fa:hover{
+  animation: wiggle 1s ease-in-out;
+  color: #ff2d00;
+  font-size: 19px;
+  text-shadow: 0.1em 0.1em 0 #FF8700;
+}
+
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-10deg);
+  }
+  20% {
+    transform: rotateZ(5deg);
+  }
+  25% {
+    transform: rotateZ(-5deg);
+  }
+  30% {
+    transform: rotateZ(3deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
+.logo{
+  height: 95px;
+  width: 101px;
+}
+/* end */
+
+.slidercontainer{
+  width:100%;
+  height: auto;
+  display: block;
+}
+
+.slider-container{
+  width: 80%;
+  height: auto;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image{
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.prev-button,
+.next-button{
+  width:40px;
+  height:60px;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(103, 103, 103);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor:pointer;
+  position: absolute;
+  transition: color 0.3s ease;
+}
+.prev-button{
+  left:0;
+}
+.next-button{
+  right:0;
+}
+.prev-button:hover,
+.next-button:hover{
+  color: white;
+}
+.lines{
+  position:absolute;
+  display:flex;
+  bottom:10px;
+}
+.line{
+  padding: 1.5px 10px;
+  margin: 0 3px;
+  background-color: aliceblue;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.active,
+.line:hover{
+  background-color: white;
+}
+.slider{
+  display: none;
+  animation-name: fade;
+  width: 100%;
+  animation-duration: 1.5s;
+}
+.heading1{
+  text-shadow: 0.1em 0.1em 0 rgb(240 108 131);
+  block-size: 100%;
+  font-size: 5rem;
+  margin-top: 25pt;
+  font-weight: 900;
+  line-height: 1.1;
+  text-align: center;
+  font-family: 'Fugaz One';
+  color: rgb(242, 231, 217);
+}
+.firstcolumn{
+  box-sizing:border-box ;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(660px, 1fr));
+  gap: 3rem;
+  margin:10px;
+  grid-auto-rows: minmax(450px,auto);
+}
+.recommendcontainer{
+  margin:20px;
+}
+.gridcontainer{
+  display: grid;
+  grid-gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit,200px);
+  grid-auto-rows: 200px;
+  grid-auto-flow: row dense;
+  justify-content: center;
+}
+.firstrecommend{
+  box-shadow: 1px 3px 3px rgb(0 10 20 / 6%);
+  grid-column: 2/4;
+  grid-row: 1/2;
+}
+.firstpicre{
+  max-height: 100%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.secondrecommend{
+  grid-row: 1 / span 2;
+  box-shadow: 1px 3px 3px rgb(0 10 20 / 6%);
+}
+.secondpicre{
+  flex-flow: row wrap;
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+  display: flex;
+}
+.thirdrecommend{
+  column-gap: 10px;
+  grid-row: 2 / 2;
+  box-shadow: 1px 3px 3px rgb(0 10 20 / 6%);
+}
+.thirdpicre{
+  flex-flow: row wrap;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.fourrecommend{
+  grid-row: 2 / 2;
+  box-shadow: 1px 3px 3px rgb(0 10 20 / 6%);
+}
+.fourpicre{
+  flex-flow: row wrap;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.contactus{
+  position: relative;
+  gap: 2rem;
+  flex: 50%;
+  font-size: 1.5em;
+}
+
+.inside:before,
+.inside:after {
+  content: " ";
+  display: table;
+  border-radius: 20px;
+}
+
+.inside:after {
+  clear: both;
+}
+
+.subtle {
+    color: rgb(217 98 119);
+}
+
+.card-container {
+  box-sizing: border-box;
+  margin: 25px auto 0;
+  position: relative;
+  width: 95%;
+  box-sizing: inherit;
+
+}
+
+.card {
+    background-color: rgb(235 115 115 / 12%);
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 0 5px rgba(75, 75, 75, .07);
+  z-index: 1;
+}
+
+.cardtext {
+  display: inline-block;
+  width: 45%;
+  font-family: 'Ibarra Real Nova', serif;
+}
+
+.card-number {
+  margin-top: 15px;
+  font-size: 1em;
+}
+
+.card-author {
+  display: block;
+  font-size: 1em;
+  letter-spacing: .5px;
+  margin: 15px 0 0;
+  text-transform: uppercase;
+}
+
+.card-title {
+  font-family: 'Fugaz One';
+  font-size: 23pt;
+  color:rgb(255 80 110); 
+  font-weight: 300;
+  line-height: 60px;
+  margin: 10px 0;
+}
+
+.card-description {
+  display: inline-block;
+  font-weight: 300;
+  line-height: 22px;
+  margin: 10px 0;
+  font-size: 19pt;
+}
+
+.card-read {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  margin: 5px 0 20px;
+  float: left;
+  position: relative;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.card-media {
+  float: right;
+  display: block;
+  max-width: 283px;
+  max-height: 350px;
+  width: auto;
+  height: auto;
+  border-radius: 20px;
+}
+.card-shadow {
+    background-color: #fff;
+    box-shadow: 0 2px 25px 2px rgb(255 220 220), 0 2px 50px 2px rgb(222 78 78), 0 0 100px 3px rgb(0 0 0 / 25%);
+    height: 1px;
+    margin: -1px auto 0;
+    width: 80%;
+    z-index: -1;
+  }
+.recommend{
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  display: table;
+  box-sizing: border-box;
+}
+.recommend1,.recommend2,.recommend3{
+  float: left;
+  position: relative;
+  overflow-x: hidden;
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px rgba(251, 200, 200, 0.5);
+}
+#recommend2{
+  z-index: 1;
+  box-shadow: 0px 0px 15px rgb(255 160 160 / 75%);
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  -o-transform: scale(1.3);
+  transform: scale(1.3);
+}
+.iconcontactus{
+  color: rgb(248, 126, 146);
+}
+
+.places_container{
+  text-align: center;
+  padding: 0;
+  list-style-type: none;
+  background-clip: padding-box;
+  background-origin: padding-box;
+  display: inline-block;
+  width: 33%;
+}
+
+.office, .phone, .email{
+  color: #f7b7b7;
+  margin-top: 1%;
+  font-family: 'Fugaz One';
+  font-size: 20px;
+}
+
+.phone_container {
+  text-align: center;
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+  background-clip: padding-box;
+  background-origin: padding-box;
+  width: 33%;
+  /* margin-bottom: 2em;
+  margin-left: 3%; */
+}
+
+.email_container{
+  width: 33%;
+}
+
+.office_value, .phone_value, .email_value{
+  font-size: 20px;
+  font-family: 'Ibarra Real Nova', serif;
+  font-weight: 400px;
+  color: rgb(249, 83, 111);
+}
+
+/* .places {
+  text-align: center;
+  padding: 0;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  list-style-type: none;
+  background-clip: padding-box;
+  background-origin: padding-box;
+  margin-left: 3%;
+} */
+
+
+
+.address {
+  color: #474747;
+  margin-top: 2pt;
+}
+.contactuss {
+  background-color: rgb(254, 232, 217);
+  margin-top: 0px;
+  width: 100%;
+  grid-column: 2;
+  display: flex;
+}
+.wearehere{
+  display: inline;
+  text-align: center;
+  font-weight: bold;
+  color: #fa9f6d;
+  text-align: center;
+  font-family: 'Fugaz One';
+}
+.operationtime{
+  display: inline-block;
+  color: #474747;
+  margin-top: 2%;
+  text-align: center;
+  font-family: 'Fugaz One';
+  color: #f87753;
+  /* margin-right: 30%; */
+}
+
+.googlemap{
+  width: 95%;
+}
+
+.mapss{
+  text-align: center;
+  position: relative;
+  gap: 2rem;
+  flex: 50%;
+  padding: 20px;
+  font-size: 1.5em;
+  margin-top: 30px;
+}
+
+.list{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 40px;
+}
+
+/* I changed here*/
+.feedbackForm{
+  background-color: white;
+  box-shadow: 10px 10px 17px rgb(248, 236, 238), -4px -4px 12px rgb(248, 236, 238);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  max-width: 800px;
+  max-height: 1500px;
+  margin: 50px auto;
+  width: 30%;
+  margin: 30px;
+  margin-top: 5%;
+  margin-bottom: 60pt;
+}
+
+form label{
+  color: rgba(243, 95, 95, 0.658);
+  font-weight: bold;
+}
+
+textarea{
+  width: 100%;
+  margin-bottom: 20pt;
+}
+
+.feedbackForm h3{
+  text-align: center;
+  font-size: x-large;
+  color: rgb(248, 126, 146);
+  font-family: 'Fugaz One';
+}
+
+.feedbackForm .details{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 7px 7px;
+  box-shadow: 2px 2px 6px rgb(244, 216, 183), 0px -1px 1px rgb(244, 216, 183);
+  border: none;
+  transition: all 0.3s ease 0s;
+  color: rgb(248, 66, 96);
+  font-weight: bold;
+  border-radius: 3px;
+  font-family: 'Ibarra Real Nova', serif;
+  font-size: 15px;
+}
+
+.feedbackForm .details:hover{
+  background-color: rgba(249, 226, 230, 0.267);
+  box-shadow: 1px 1px 3px rgb(243, 158, 189), 0px -1px 1px rgb(244, 216, 183);
+}
+
+.feedbackForm .details:focus{
+  outline: none;
+  background-color: rgba(249, 226, 230, 0.842);
+  box-shadow: 2px 2px 7px rgb(243, 158, 189), 0px -1px 1px rgb(244, 216, 183);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+}
+
+.submitButton {
+  background: radial-gradient(circle, rgb(249, 228, 215)40%, rgb(251, 200, 216) 73%);;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 3px 3px 6px rgb(246, 223, 176);
+  box-sizing: border-box;
+  color: rgb(243, 101, 125);
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Fugaz One';
+  font-size: 19px;
+  font-weight: 400;
+  outline: none;
+  padding: 5px 10px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+  width: 100%;
+  transition: all 0.3s ease 0s;
+}
+
+.submitButton:hover{
+  box-shadow: 5px 5px 6px rgb(245, 184, 225), 0px -2px 1px rgb(244, 209, 240);
+  color: rgb(241, 151, 164) ;
+}
+
+.submitButton:active {
+  background-color: #ef8bc9;
+  color: rgb(243, 101, 125);
+}
+
+@keyframes fade {
+  from{
+    opacity:0.5s;
+  }
+  to{
+    opacity: 1;
+  }
+}
+@media (max-width:1388px){
+  .firstcolumn{
+    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+  }
+}
+@media(max-width:1154px){
+  .card-body {
+    width: 40%;
+}
+.card-read:after {
+  width: 0;
+}
+
+.card-media {
+  max-width: 50%;
+}}
+@media(max-width:1720px){
+.recommend{
+  margin-right: auto;
+  margin-left: auto;
+}
+}
+
+@media(max-width:968px){
+  .gridcontainer{
+    grid-template-columns:auto;
+  }
+  .firstrecommend {
+    width: 250px;
+    height: 150px;
+}
+  .img1{
+  width: 350px;
+  height: 150px;
+}
+  .img2,.thirdrecommend,.fourrecommend{
+  width: 150px;
+  height: 150px;
+}
+}
+@media(max-width:860px){
+  .recommend1, .recommend2, .recommend3 {
+    width: 115pt;
+    height: 115pt;
+  }
+}
+@media(max-width:648px){
+  .gridcontainer{
+    grid-template-columns:auto;
+  }
+  .firstrecommend {
+    width: 250px;
+    height: 150px;
+}
+  .img1{
+  width: 250px;
+  height: 150px;
+}
+  .img2,.thirdrecommend,.fourrecommend{
+  width: 120px;
+  height: 150px;
+}
+.imgs{
+  width: 104px;
+  height: 380px;
+}
+.heading1 {
+  font-size: 50pt;}
+}
